@@ -2,14 +2,14 @@ require "bundler/capistrano"
 
 server "50.116.13.153", :web, :app, :db, primary: true
 
-set :application, "20121004-testproject"
+set :application, "testproject"
 set :user, "deployer"
-set :deploy_to, "/home/#{user}/apps/#{application}"
+set :deploy_to, "/home/#{user}/sites/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, true
 
 set :scm, "git"
-set :repository, "git@github.com:hicapacity/#{application}.git"
+set :repository, "git@github.com:hicapacity/20121004-#{application}.git"
 set :branch, "master"
 
 default_run_options[:pty] = true
